@@ -1,10 +1,10 @@
 console.log("hi");
 angular.module('githubApp', [])
-.controller('Controller', Controller );
+.controller('InstructorController', InstructorController );
 
 
-function Controller() {
-  this.instructors = [
+function InstructorController() {
+  this.instructorList = [
     {
       name: 'Nathan Allen',
       github: 'nathanallen',
@@ -55,12 +55,6 @@ function Controller() {
       cohort: 26,
     },
     {
-      name: 'Ben Manning',
-      github: 'ben-manning',
-      image: 'https://avatars0.githubusercontent.com/u/8397980?v=3&s=460',       position: 'Instructor',
-      cohort: 24,
-    },
-    {
       name: 'Travis Gaff',
       github: 'tgaff',
       image: 'https://avatars2.githubusercontent.com/u/1916144?v=3&s=460',
@@ -68,5 +62,4 @@ function Controller() {
       cohort: 25,
     }
   ];
-  this.orderProp = 'cohort';
 }
