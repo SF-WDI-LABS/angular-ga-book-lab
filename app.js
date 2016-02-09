@@ -1,7 +1,9 @@
-var app = angular.module("GABook", ['app.directives.nameCard']);
+//TODO: How would we go about injecting the 'directives.nameCard' dependency externally to the angular.moodule?
+angular.module("GABook", ['directives.nameCard'])
+  .controller('InstructorController', InstructorController);
 
-app.controller('Controller', ['$scope', function($scope) {
-    $scope.instructors = [
+  function InstructorController() {
+    this.instructors = [
      {
        name: 'Nathan Allen',
        github: 'nathanallen',
@@ -45,53 +47,11 @@ app.controller('Controller', ['$scope', function($scope) {
        cohort: 23,
      },
      {
-       name: 'Matthew Villwock',
-       github: 'mtvillwock',
-       image: 'https://avatars2.githubusercontent.com/u/8475488?',
-       position: 'Instructor',
-       cohort: 23,
-     },
-     {
        name: 'Ben Hulan',
        github: 'benhulan',
        image: 'https://avatars1.githubusercontent.com/u/7320191?',
        position: 'Instructor',
        cohort: 22,
-     },
-     {
-       name: 'Juliana Lopker',
-       github: 'jlopker',
-       image: 'https://avatars1.githubusercontent.com/u/3010270?',
-       position: 'Instructor',
-       cohort: 23,
-     },
-     {
-       name: 'Vikash Parekh',
-       github: 'vikashiscool',
-       image: 'https://avatars1.githubusercontent.com/u/9686256?v=3&s=460',
-       position: 'Developer In Residence',
-       cohort: 21,
-     },
-     {
-       name: 'Andrew Patzsch',
-       github: 'mrpatzsch',
-       image: 'https://avatars2.githubusercontent.com/u/10443141?v=3&s=460',
-       position: 'Developer In Residence',
-       cohort: 21,
-     },
-     {
-       name: 'Bedford Williamson',
-       github: 'goodbedford',
-       image: 'https://avatars1.githubusercontent.com/u/2454833?v=3&s=460',
-       position: 'Developer In Residence',
-       cohort: 22,
-     },
-     {
-       name: 'Ben Manning',
-       github: 'ben-manning',
-       image: 'https://avatars0.githubusercontent.com/u/8397980?v=3&s=460',
-       position: 'Instructor',
-       cohort: 24,
      },
      {
        name: 'Travis Gaff',
@@ -100,12 +60,5 @@ app.controller('Controller', ['$scope', function($scope) {
        position: 'Developer In Residence',
        cohort: 23,
      },
-     {
-       name: 'Erik Erwitt',
-       github: 'eerwitt',
-       image: 'https://avatars3.githubusercontent.com/u/1329385?v=3&s=460',
-       position: 'Instructor',
-       cohort: 24,
-     }
    ];
-}]);
+};

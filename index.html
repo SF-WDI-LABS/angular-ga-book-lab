@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en" data-ng-app="GABook">
 <head>
   <meta charset="UTF-8">
   <title>GABook</title>
@@ -11,11 +11,11 @@
   <script src="directives.js"></script>
 
 </head>
-<body ng-app="GABook">
+<body>
   <h1> Your Favorite Instructors </h1>
-  <div ng-controller="Controller">
+  <div data-ng-controller="InstructorController as ctrl">
     <!--  Traverses $scope.students in app.js controller -->
-    <div ng-repeat="instructor in instructors | orderBy: 'cohort'">
+    <div data-ng-repeat="instructor in ctrl.instructors | orderBy: 'cohort'">
       <name-card></name-card>
     </div>
   </div>
