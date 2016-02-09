@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sf-wdi-21/ng-directives-lecture#readme",
   "dependencies": {
-    "bower": "^1.5.3",
+    "bower": "^1.7.7",
     "http-server": "^0.8.5"
   }
 }

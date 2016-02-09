@@ -11,9 +11,9 @@
 </head>
 
 <body >
-  <div ng-controller="Controller">
+  <div ng-controller="Controller as ctrl">
     <!--  Traverses $scope.students in app.js controller -->
-    <div ng-repeat="instructor in instructors">
+    <div ng-repeat="instructor in ctrl.instructors">
       {{instructor.name}} {{instructor.github}} {{instructor.cohort}} {{instructor.position}}
     </div>
   </div>

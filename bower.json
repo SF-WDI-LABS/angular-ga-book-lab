@@ -1,5 +1,5 @@
 {
-  "name": "ng-directives",
+  "name": "y",
   "version": "0.0.0",
   "authors": [
     "Justin Castilla <pxlperfection@gmail.com>"
@@ -8,7 +8,7 @@
   "main": "app.js",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/SF-WDI-LABS/ng-directives-lecture",
   "ignore": [
     "**/.*",
     "node_modules",
