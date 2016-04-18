@@ -55,6 +55,9 @@ To call this directive, simply use the **snake-case** of the directive name:
 
 3. Within the `instructor-namecard` directive, add a button (using `ng-click` and `ng-init`) that will increment the total amount of times an instructor has said "Automagic" in your tenure at GA.
 
+4. When displaying the amount of times an instructor has said "Automagic", implement `ng-pluralize` to create custom messages for 0, 1, and multiple occurences. 
+
+
 4. Include logic within your `instructor-namecard` that will display the message 'This instructor is a wizard!' when the total Automagic count reaches ten or above.
 
 
