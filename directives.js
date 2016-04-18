@@ -1,5 +1,6 @@
 angular.module('directives.nameCard', [])
   .directive('nameCard', nameCard);
+
 function nameCard() {
     return {
       restrict: 'E',
