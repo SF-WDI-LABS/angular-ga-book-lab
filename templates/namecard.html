@@ -7,7 +7,12 @@
   +1
 </button>
 <span>
-   {{count}} times!
+  <ng-pluralize count="count"
+                when="{'0': 'Zero times :(',
+                       '1': 'Only once.',
+                       'other': 'A total of {{count}} times.',
+                       }">
+  </ng-pluralize>
 </span></p>
 
 <div ng-if="count >= 10">
