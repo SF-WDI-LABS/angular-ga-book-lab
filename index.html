@@ -11,9 +11,9 @@
 </head>
 
 <body >
-  <div ng-controller="InstructorController as ctrl">
+  <div ng-controller="InstructorController as instructorCtrl">
     <!--  Traverses $scope.students in app.js controller -->
-    <div ng-repeat="instructor in ctrl.instructorList | orderBy: 'cohort'">
+    <div ng-repeat="instructor in instructorCtrl.instructorList | orderBy: 'cohort'">
       <img ng-src="{{instructor.image}}">{{instructor.name}} {{instructor.github}} {{instructor.cohort}} {{instructor.position}}
     </div>
   </div>
