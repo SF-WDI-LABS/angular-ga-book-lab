@@ -6,7 +6,7 @@ angular
 
 function InstructorController() {
   var vm = this;
-  vm.instructorList = [
+  vm.instructorList = [ 
     {
       name: 'Nathan Allen',
       github: 'nathanallen',
