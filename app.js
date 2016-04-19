@@ -1,12 +1,10 @@
-console.log("hi");
 angular
-  .module('githubApp', [])
-  .controller('InstructorController', InstructorController );
-
+  .module('GABook', [])
+  .controller('InstructorController', InstructorController);
 
 function InstructorController() {
   var vm = this;
-  vm.instructorList = [ 
+  vm.instructorList = [
     {
       name: 'Nathan Allen',
       github: 'nathanallen',

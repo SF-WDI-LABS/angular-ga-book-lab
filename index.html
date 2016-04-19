@@ -1,20 +1,48 @@
+
 <!doctype html>
-<html lang="en" ng-app="githubApp">
+<html lang="en" data-ng-app="GABook">
 <head>
   <meta charset="UTF-8">
-  <title>Instructor List</title>
+  <title>GABook</title>
 
   <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="bower_components\angular\angular.min.js"></script>
+  <script src="bower_components\angular\angular.js"></script>
   <script src="app.js"></script>
-</head>
 
-<body >
-  <div ng-controller="InstructorController as instructorCtrl">
+</head>
+<body>
+
+  <h1> Your Favorite Instructors </h1>
+  <div data-ng-controller="InstructorController as instructors">
     <!--  Traverses $scope.students in app.js controller -->
-    <div ng-repeat="instructor in instructorCtrl.instructorList | orderBy: 'cohort'">
-      <img ng-src="{{instructor.image}}">{{instructor.name}} {{instructor.github}} {{instructor.cohort}} {{instructor.position}}
+    <div data-ng-repeat="instructor in instructors.instructorList | orderBy:orderProperty">
+      <img data-ng-src={{instructor.image}} width='100px'>
+
+      <h3>Name: {{instructor.name}} ({{instructor.position}} Extraordinaire)</h3>
+
+      <h3>Github Address: <a href="{{'https://www.github.com/' + instructor.github}}" target="new">{{ instructor.github}}</a></h3>
+
+      <p>Currently instructing cohort # {{instructor.cohort}}</p>
+
+      Total occurrences of {{instructor.name}} saying the word 'Automagic'
+      <button data-ng-click="count = count + 1" data-ng-init="count=0">
+        +1
+      </button>
+      <span>
+        <ng-pluralize count="count"
+                      when="{'0': 'Zero times :(',
+                             '1': 'Only once.',
+                             'other': 'A total of {{count}} times.',
+                             }">
+        </ng-pluralize>
+      </span>
+
+      <div data-ng-if="count >= 10">
+        <em>This instructor is a wizard!</em>
+      </div>
+
+      <hr>
     </div>
   </div>
 </body>
